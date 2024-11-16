@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="p-6 max-w-96 mx-auto">
                 <SocialMedia color="#333333"/>
                 <div className="flex justify-center my-4">
-                    <img src="/8.png" alt="" />
+                    <img src="/nextapp/8.png" alt="" />
                 </div>
                 <div className="text-sm font-light text-center">
                     <p>royalsite.org@gmail.com</p>
@@ -14,7 +14,7 @@ const Footer = () => {
                     <p>08:00 - 22:00 - Everyday</p>
                 </div>
                 <div className="flex justify-center my-4">
-                    <img src="/8.png" alt="" />
+                    <img src="/nextapp/8.png" alt="" />
                 </div>
                 <div className="flex justify-between ">
                     <p>About</p>

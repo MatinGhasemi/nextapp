@@ -17,7 +17,7 @@ export default function Home() {
       <div className="px-3">
         <div className="flex justify-center">
           <div className="relative -bottom-6 bg-11 text-center w-32 h-32">
-            <img className="absolute top-0 left-0 w-full h-full" src={'/101.png'} width={80} height={80} alt="10"/>
+            <img className="absolute top-0 left-0 w-full h-full" src={'/nextapp/101.png'} width={80} height={80} alt="10"/>
             <div className="text-center pt-3 z-10">
               <p className="text-4xl italic text-foreground">October</p>
               <p className="text-foreground text-sm font-light tracking-widest">COLLECTION</p>
@@ -26,9 +26,9 @@ export default function Home() {
         </div>
         <div className="flex flex-col items-center">
           <div className="relative -top-6">
-            <Link href="/product/"><img id="October" src="/image 20.png" alt="woman" /></Link>
+            <Link href="/product/"><img id="October" src="/nextapp/image 20.png" alt="woman" /></Link>
             <div className="absolute bottom-10 -right-4">
-              <img className="w-40 h-32" src="/10.png" alt="" />
+              <img className="w-40 h-32" src="/nextapp/10.png" alt="" />
             </div>
             <div className="flex justify-between h-5 mt-2 items-center gap-2 text-foreground">
               <p className="italic">01</p>
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </div>
           <div className="mt-2">
-            <Link href="/product/"><img id="Black" src="/image 21.png" alt="woman" /></Link>
+            <Link href="/product/"><img id="Black" src="/nextapp/image 21.png" alt="woman" /></Link>
             <div className="flex justify-between h-5 mt-2 items-center gap-2 text-foreground">
               <p className="italic">02</p>
               <hr className="w-full opacity-10"/>
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
           </div>
           <div className="my-8">
-            <Link href="/product/"><img id="Hae" src="/image 22.png" alt="woman" /></Link>
+            <Link href="/product/"><img id="Hae" src="/nextapp/image 22.png" alt="woman" /></Link>
             <div className="flex justify-between h-5 mt-2 items-center gap-2 text-foreground">
               <p className="italic">03</p>
               <hr className="w-full opacity-10"/>

@@ -97,7 +97,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="flex justify-center mb-8">
-                <img src={require("../../public/8.png")} />
+                <img src="/nextapp/8.png" />
             </div>
             <SocialMedia color="#F9F9F9"/>
         </div>

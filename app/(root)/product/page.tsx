@@ -103,23 +103,23 @@ const Product = () => {
             <div>
                 <div className="max-w-96 mx-auto">
                     <div ref={slider} className="overflow-hidden max-w-96 flex scroll-smooth">
-                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/image 15.png" alt="ring" /></div>
-                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/Rectangle 430.png"/></div>
-                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/Rectangle 431.png"/></div>
-                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/image 17.png"/></div>
+                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/nextapp/image 15.png" alt="ring" /></div>
+                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/nextapp/Rectangle 430.png"/></div>
+                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/nextapp/Rectangle 431.png"/></div>
+                        <div><img style={{minWidth:`${w}px`}} className="h-full object-cover" src="/nextapp/image 17.png"/></div>
                     </div>
                     <div className="flex justify-center w-full">
                         <div className="w-1/4 h-20 active">
-                            <img onClick={e=>first(e)} className="w-full h-full object-cover" src="/image 15.png" alt="" />
+                            <img onClick={e=>first(e)} className="w-full h-full object-cover" src="/nextapp/image 15.png" alt="" />
                         </div>
                         <div className="w-1/4 h-20">
-                            <img onClick={e=>second(e)} className="w-full h-full object-cover" src="/Rectangle 430.png" alt="" />
+                            <img onClick={e=>second(e)} className="w-full h-full object-cover" src="/nextapp/Rectangle 430.png" alt="" />
                         </div>
                         <div className="w-1/4 h-20">
-                            <img onClick={e=>third(e)} className="w-full h-full object-cover" src="/Rectangle 431.png" alt="" />
+                            <img onClick={e=>third(e)} className="w-full h-full object-cover" src="/nextapp/Rectangle 431.png" alt="" />
                         </div>
                         <div className="w-1/4 h-20">
-                            <img onClick={e=>forth(e)} className="w-full h-full object-cover" src="/image 17.png" alt="" />
+                            <img onClick={e=>forth(e)} className="w-full h-full object-cover" src="/nextapp/image 17.png" alt="" />
                         </div>
                     </div>
                     <div className="px-2 mt-10">
@@ -168,16 +168,16 @@ const Product = () => {
                 <div className="max-w-96 mx-auto mt-6 px-2">
                     <div>
                         <p className="mb-2 font-light tracking-wide">GALLERY</p>
-                        <div><img className="w-full" src="/image 16.png" /></div>
-                        <div><img className="w-full" src="/image 17.png" /></div>
-                        <div><img className="w-full" src="/image 18.png" /></div>
+                        <div><img className="w-full" src="/nextapp/image 16.png" /></div>
+                        <div><img className="w-full" src="/nextapp/image 17.png" /></div>
+                        <div><img className="w-full" src="/nextapp/image 18.png" /></div>
                     </div>
                     <div>
                         <p className="my-4">CARE</p>
                         <div onClick={e=>readShipping(e)} style={{height:"89px"}} className="text-background transition-all overflow-hidden py-2">
                             <div className="flex justify-between">
                                 <div className="flex gap-2">
-                                    <img src="/Truck.svg" />
+                                    <img src="/nextapp/Truck.svg" />
                                     <p className="text-nowrap">Free Flat Rate Shipping</p>
                                 </div>
                                 <div>
@@ -195,7 +195,7 @@ const Product = () => {
                         <div onClick={e=>readTag(e)} style={{height:'40px'}} className="text-background transition-all overflow-hidden py-2 border-t-2">
                             <div className="flex justify-between">
                                 <div className="flex gap-2">
-                                    <img src="/Tag.svg" />
+                                    <img src="/nextapp/Tag.svg" />
                                     <p className="text-nowrap">COD Policy</p>
                                 </div>
                                 <div>
@@ -213,7 +213,7 @@ const Product = () => {
                         <div onClick={e=>readRefresh(e)} style={{height:'40px'}} className="text-background transition-all overflow-hidden py-2 border-t-2">
                             <div className="flex justify-between">
                                 <div className="flex gap-2">
-                                    <img src="/Refresh.svg" />
+                                    <img src="/nextapp/Refresh.svg" />
                                     <p className="text-nowrap">Return Policy</p>
                                 </div>
                                 <div>
@@ -238,12 +238,12 @@ const Product = () => {
                         <p>LIKE</p>
                     </div>
                     <div className="flex justify-center mt-2">
-                        <img src="/8.png" />
+                        <img src="/nextapp/8.png" />
                     </div>
                     <div className="grid grid-cols-2 gap-2 px-2 py-8">
                         <div>
                             <div className="relative h-64">
-                                <img className="w-full h-64" src="/ring1.png" />
+                                <img className="w-full h-64" src="/nextapp/ring1.png" />
                                 <svg onClick={e=>{fillHeart(e)}} className="z-20 absolute bottom-3 right-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.77216 4.59638C0.40928 6.95925 0.409282 10.7902 2.77216 13.1531L11.937 22.3179L12 22.255L12.0631 22.318L21.2279 13.1532C23.5908 10.7903 23.5908 6.95933 21.2279 4.59645C18.865 2.23358 15.034 2.23358 12.6712 4.59645L12.3536 4.914C12.1584 5.10927 11.8418 5.10927 11.6465 4.914L11.3289 4.59638C8.96601 2.2335 5.13503 2.2335 2.77216 4.59638Z" stroke="#DD8560"/>
                                 </svg>
@@ -254,7 +254,7 @@ const Product = () => {
                         </div>
                         <div>
                             <div className="relative h-64">
-                                <img className="w-full h-64" src="/Rectangle 344.png" />
+                                <img className="w-full h-64" src="/nextapp/Rectangle 344.png" />
                                 <svg onClick={e=>{fillHeart(e)}} className="z-20 absolute bottom-3 right-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.77216 4.59638C0.40928 6.95925 0.409282 10.7902 2.77216 13.1531L11.937 22.3179L12 22.255L12.0631 22.318L21.2279 13.1532C23.5908 10.7903 23.5908 6.95933 21.2279 4.59645C18.865 2.23358 15.034 2.23358 12.6712 4.59645L12.3536 4.914C12.1584 5.10927 11.8418 5.10927 11.6465 4.914L11.3289 4.59638C8.96601 2.2335 5.13503 2.2335 2.77216 4.59638Z" stroke="#DD8560"/>
                                 </svg>
@@ -265,7 +265,7 @@ const Product = () => {
                         </div>
                         <div>
                             <div className="relative h-64">
-                                <img className="w-full h-64" src="/ring2.png" />
+                                <img className="w-full h-64" src="/nextapp/ring2.png" />
                                 <svg onClick={e=>{fillHeart(e)}} className="z-20 absolute bottom-3 right-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.77216 4.59638C0.40928 6.95925 0.409282 10.7902 2.77216 13.1531L11.937 22.3179L12 22.255L12.0631 22.318L21.2279 13.1532C23.5908 10.7903 23.5908 6.95933 21.2279 4.59645C18.865 2.23358 15.034 2.23358 12.6712 4.59645L12.3536 4.914C12.1584 5.10927 11.8418 5.10927 11.6465 4.914L11.3289 4.59638C8.96601 2.2335 5.13503 2.2335 2.77216 4.59638Z" stroke="#DD8560"/>
                                 </svg>
@@ -276,7 +276,7 @@ const Product = () => {
                         </div>
                         <div>
                             <div className="relative h-64">
-                                <img className="w-full h-64" src="/ring3.png" />
+                                <img className="w-full h-64" src="/nextapp/ring3.png" />
                                 <svg onClick={e=>{fillHeart(e)}} className="z-20 absolute bottom-3 right-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.77216 4.59638C0.40928 6.95925 0.409282 10.7902 2.77216 13.1531L11.937 22.3179L12 22.255L12.0631 22.318L21.2279 13.1532C23.5908 10.7903 23.5908 6.95933 21.2279 4.59645C18.865 2.23358 15.034 2.23358 12.6712 4.59645L12.3536 4.914C12.1584 5.10927 11.8418 5.10927 11.6465 4.914L11.3289 4.59638C8.96601 2.2335 5.13503 2.2335 2.77216 4.59638Z" stroke="#DD8560"/>
                                 </svg>
