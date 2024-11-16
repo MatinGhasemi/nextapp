@@ -30,7 +30,7 @@ const Product = () => {
         else setW(384)
     },[])
 
-    const readShipping = (e:any)=>{
+    const readShipping = (e:React.MouseEvent<HTMLDivElement>)=>{
         if (shipping.current){
             if (e.currentTarget.offsetHeight < 50){
                 e.currentTarget.style.height = "89px";
@@ -42,7 +42,7 @@ const Product = () => {
             }
         }
     }
-    const readRefresh = (e:any)=>{
+    const readRefresh = (e:React.MouseEvent<HTMLDivElement>)=>{
         if (refresh.current){
             if (e.currentTarget.offsetHeight < 50){
                 e.currentTarget.style.height = "89px";
@@ -53,7 +53,7 @@ const Product = () => {
             }
         }
     }
-    const readTag = (e:any)=>{
+    const readTag = (e:React.MouseEvent<HTMLDivElement>)=>{
         if (tag.current){
             if (e.currentTarget.offsetHeight < 50){
                 e.currentTarget.style.height = "89px";
@@ -65,25 +65,25 @@ const Product = () => {
         }
     }
 
-    const first = (e:any)=>{
+    const first = (e:React.MouseEvent<HTMLImageElement>)=>{
         document.querySelector(".active")?.classList.remove("active");
         e.currentTarget.classList.add("active")
         if (slider.current)
             slider.current.scrollLeft = 0 ;
     }
-    const second = (e:any)=>{
+    const second = (e:React.MouseEvent<HTMLImageElement>)=>{
         document.querySelector(".active")?.classList.remove("active");
         e.currentTarget.classList.add("active")
         if (slider.current)
             slider.current.scrollLeft = w ;
     } 
-    const third = (e:any)=>{
+    const third = (e:React.MouseEvent<HTMLImageElement>)=>{
         document.querySelector(".active")?.classList.remove("active");
         e.currentTarget.classList.add("active")
         if (slider.current)
             slider.current.scrollLeft = w*2 ;
     }
-    const forth = (e:any)=>{
+    const forth = (e:React.MouseEvent<HTMLImageElement>)=>{
         document.querySelector(".active")?.classList.remove("active");
         e.currentTarget.classList.add("active")
         if (slider.current)
@@ -91,7 +91,7 @@ const Product = () => {
     }
 
 
-    const fillHeart = (e:any)=>{
+    const fillHeart = (e:React.MouseEvent<SVGSVGElement>)=>{
         if (e.currentTarget.getAttribute("fill") === "none")
             e.currentTarget.setAttribute("fill","#DD8560");
         else 

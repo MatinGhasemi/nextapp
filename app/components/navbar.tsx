@@ -1,11 +1,15 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import MenuComponent from "./menuComponent";
 import SocialMedia from "./socialmedia";
 
 const Navbar = () => {
-    const w = window.innerWidth
+    const [w,setW] = useState(384);
+
+    useEffect(()=>{
+        setW(window.innerWidth);
+    },[])
 
     const rightBar = useRef<HTMLDivElement|null>(null);
     const woman = useRef<HTMLDivElement|null>(null);

@@ -1,12 +1,16 @@
 import Link from "next/link";
 
-const MenuComponent = ({func}:{func:Function}) => {
+interface test{
+    func:()=>void;
+}
+
+const MenuComponent:React.FC<test> = ({func}) => {
     const closeHegiht = '40px';
     const openHegiht = "170px";
 
-    const readItem = (e:any)=>{
-        let subject = document.querySelector(`.${e.currentTarget.dataset.name}`) as HTMLElement ;
-
+    const readItem = (e:React.MouseEvent<HTMLDivElement>)=>{
+        const subject = document.querySelector(`.${e.currentTarget.dataset.name}`) as HTMLElement ;
+    
         if (e.currentTarget.offsetHeight < 45){
             e.currentTarget.style.height = openHegiht;
             subject.style.rotate = "180deg";
@@ -88,7 +92,7 @@ const MenuComponent = ({func}:{func:Function}) => {
                 </svg>
             </div>
             <div className="text-lg space-y-4 mt-2">
-                <div className="pl-4"><p>L'Oréal</p></div>
+                <div className="pl-4"><p>L&apos;Oréal</p></div>
                 <div className="pl-4"><p>Estée Lauder</p></div>
                 <div className="pl-4"><p>Johnson & Johnson</p></div>
             </div>
