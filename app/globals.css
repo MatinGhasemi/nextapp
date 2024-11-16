@@ -1,21 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.italianno {
+  font-family: "Italianno";
+  font-weight: 400;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+body{
+  background: #343434;
+  overflow-x: hidden;
+}
+
+#rightbar{
+  overflow-y: auto;
+}
+
+
+@layer components{
+  .active{
+    @apply border-b-2 border-orange-400;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
