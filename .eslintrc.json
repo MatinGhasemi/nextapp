@@ -1,3 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "rules": {
+    "no-console": "off", // Disable console warnings
+    "react/prop-types": "off", // Disable prop-types warnings
+    // Add any other rules you want to disable or modify
+  }
 }
