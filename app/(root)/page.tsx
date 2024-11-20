@@ -1,59 +1,55 @@
-import Link from "next/link";
+"use client"
+import Image from "next/image";
 
+import Carousel from "../components/carousel";
+import url from "../production";
+import valueType from "../interfaces/relatedValue";
+import Related from "../components/related";
+import BrandBox from "../components/brandBox";
+import JustForYou from "../components/justForYou";
+import OpenFashion from "../components/openFashion";
+import Collection from "../components/collections";
+import LightNavbar from "../components/lightNavbar";
 
-// export const fetchData = async (): Promise<RecipeType[]> => {
-//   const response = await axios.get(`http://api.recipeapp.soroushsalari.com/recipes/recipes?page=1&per_page=8`);
-//   if (response.status === 200) {
-//     return response.data.items;
-//   }
-//   return [];
-// };
+const Home = () => {
+    const values:valueType[] = [
+        {src:`${url}woman3.png`,text:"21WN",price:120,heart:false},
+        {src:`${url}woman4.png`,text:"21WN",price:120,heart:false},
+        {src:`${url}woman5.png`,text:"21WN",price:120,heart:false},
+        {src:`${url}woman6.png`,text:"21WN",price:120,heart:false}
+    ]
 
-export default function Home() {
-  // const recipes = await fetchData();
-
-  return (
-    <div>
-      <div className="px-3">
-        <div className="flex justify-center">
-          <div className="relative -bottom-6 bg-11 text-center w-32 h-32">
-            <img className="absolute top-0 left-0 w-full h-full" src={'/nextapp/101.png'} width={80} height={80} alt="10"/>
-            <div className="text-center pt-3 z-10">
-              <p className="text-4xl italic text-foreground">October</p>
-              <p className="text-foreground text-sm font-light tracking-widest">COLLECTION</p>
+    return (<>
+        <LightNavbar />
+        <div>
+            <Carousel />
+            <div className="text-center flex flex-col items-center mt-10">
+                <p className="text-2xl tracking-wider font-serif">NEW ARRIVAL</p>
+                <Image src={`${url}8.png`} width={100} height={200} alt="hr" />
+                <div>
+                    <div className="flex justify-center gap-7 mt-5">
+                        <div className="relative">
+                            <p className="tracking-widest border-b-2 border-price z-10">All</p>
+                            <svg width="11" className="absolute z-0 left-1/2 -translate-x-1/2 top-[19px] fill-price" height="11" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4.5" y="1.17008" width="5.15685" height="5.15685" transform="rotate(45 4.5 1.17008)" stroke="none" strokeWidth="1"/>
+                            </svg>
+                        </div>
+                        <div className="tracking-widest">Apparel</div>
+                        <div className="tracking-widest">Dress</div>
+                        <div className="tracking-widest">Tshirt</div>
+                        <div className="tracking-widest">Bag</div>
+                    </div>
+                    <Related src={values}/>        
+                    <BrandBox />
+                    <Collection />  
+                    <div className="mt-20 mb-8">
+                        <JustForYou />
+                    </div>
+                    <OpenFashion />
+                </div>
             </div>
-          </div>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="relative -top-6">
-            <Link href="/product/"><img id="October" src="/nextapp/image 20.png" alt="woman" /></Link>
-            <div className="absolute bottom-10 -right-4">
-              <img className="w-40 h-32" src="/nextapp/10.png" alt="" />
-            </div>
-            <div className="flex justify-between h-5 mt-2 items-center gap-2 text-foreground">
-              <p className="italic">01</p>
-              <hr className="w-full opacity-10"/>
-              <p className="whitespace-nowrap text-sm font-light tracking-widest">OCTOBER COLLECTION</p>
-            </div>
-          </div>
-          <div className="mt-2">
-            <Link href="/product/"><img id="Black" src="/nextapp/image 21.png" alt="woman" /></Link>
-            <div className="flex justify-between h-5 mt-2 items-center gap-2 text-foreground">
-              <p className="italic">02</p>
-              <hr className="w-full opacity-10"/>
-              <p className="whitespace-nowrap text-sm font-light tracking-widest">BLACK COLLECTION</p>
-            </div>
-          </div>
-          <div className="my-8">
-            <Link href="/product/"><img id="Hae" src="/nextapp/image 22.png" alt="woman" /></Link>
-            <div className="flex justify-between h-5 mt-2 items-center gap-2 text-foreground">
-              <p className="italic">03</p>
-              <hr className="w-full opacity-10"/>
-              <p className="whitespace-nowrap text-sm font-light tracking-widest">HAE BY HAEKIM</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    );
+    </>);
 }
+ 
+export default Home;

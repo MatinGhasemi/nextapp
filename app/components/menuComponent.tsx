@@ -5,7 +5,7 @@ interface test{
 }
 
 const MenuComponent:React.FC<test> = ({func}) => {
-    const closeHegiht = '40px';
+    const closeHegiht = '38px';
     const openHegiht = "170px";
 
     const readItem = (e:React.MouseEvent<HTMLDivElement>)=>{
@@ -32,9 +32,9 @@ const MenuComponent:React.FC<test> = ({func}) => {
                 </svg>
             </div>
             <div className="text-lg space-y-4 mt-2">
-                <div className="pl-4"><Link onClick={()=>func()} href="/#October">October Collection</Link></div>
-                <div className="pl-4"><Link onClick={()=>func()} href="/#Black">Black Collection</Link></div>
-                <div className="pl-4"><Link onClick={()=>func()} href="/#Hae">Hae By Haekim</Link></div>
+                <div className="pl-4"><Link onClick={()=>func()} href="/collection">October Collection</Link></div>
+                <div className="pl-4"><Link onClick={()=>func()} href="/collection">Black Collection</Link></div>
+                <div className="pl-4"><Link onClick={()=>func()} href="/collection">Hae By Haekim</Link></div>
             </div>
         </div>
         <div data-name="apparel" onClick={e=>readItem(e)} style={{height:closeHegiht}} className="overflow-hidden transition-all">
@@ -47,9 +47,9 @@ const MenuComponent:React.FC<test> = ({func}) => {
                 </svg>
             </div>
             <div className="text-lg space-y-4 mt-2">
-                <div className="pl-4"><p>Dress</p></div>
-                <div className="pl-4"><p>T-shirt</p></div>
-                <div className="pl-4"><p>Pants</p></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Dress</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>T-shirt</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Pants</Link></div>
             </div>
         </div>
         <div data-name="bag" onClick={e=>readItem(e)} style={{height:closeHegiht}} className="overflow-hidden transition-all">
@@ -62,9 +62,9 @@ const MenuComponent:React.FC<test> = ({func}) => {
                 </svg>
             </div>
             <div className="text-lg space-y-4 mt-2">
-                <div className="pl-4"><p>Hermès</p></div>
-                <div className="pl-4"><p>Céline</p></div>
-                <div className="pl-4"><p>Gucci</p></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Hermès</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Céline</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Gucci</Link></div>
             </div>
         </div>
         <div data-name="shoes" onClick={e=>readItem(e)} style={{height:closeHegiht}} className="overflow-hidden transition-all">
@@ -77,9 +77,9 @@ const MenuComponent:React.FC<test> = ({func}) => {
                 </svg>
             </div>
             <div className="text-lg space-y-4 mt-2">
-                <div className="pl-4"><p>Tommy Hilfinger</p></div>
-                <div className="pl-4"><p>Toe Warmers</p></div>
-                <div className="pl-4"><p>Vans</p></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Tommy Hilfinger</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Toe Warmers</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Vans</Link></div>
             </div>
         </div>
         <div data-name="beauty" onClick={e=>readItem(e)} style={{height:closeHegiht}} className="overflow-hidden transition-all">
@@ -92,9 +92,9 @@ const MenuComponent:React.FC<test> = ({func}) => {
                 </svg>
             </div>
             <div className="text-lg space-y-4 mt-2">
-                <div className="pl-4"><p>L&apos;Oréal</p></div>
-                <div className="pl-4"><p>Estée Lauder</p></div>
-                <div className="pl-4"><p>Johnson & Johnson</p></div>
+                <div className="pl-4"><Link href="/products" onClick={()=>{func()}}>L&apos;Oréal</Link></div>
+                <div className="pl-4"><Link href="/products" onClick={()=>{func()}}>Estée Lauder</Link></div>
+                <div className="pl-4"><Link href="/products" onClick={()=>{func()}}>Johnson & Johnson</Link></div>
             </div>
         </div>
         <div data-name="accessories" onClick={e=>readItem(e)} style={{height:closeHegiht}} className="transition-all overflow-hidden">
@@ -107,9 +107,9 @@ const MenuComponent:React.FC<test> = ({func}) => {
                 </svg>
             </div>
             <div className="text-lg space-y-4 mt-2">
-                <div className="pl-4"><p>Alexander McQueen</p></div>
-                <div className="pl-4"><p>Marc Jacobs</p></div>
-                <div className="pl-4"><p>Balenciaga</p></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Alexander McQueen</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Marc Jacobs</Link></div>
+                <div className="pl-4"><Link href='/products' onClick={()=>{func()}}>Balenciaga</Link></div>
             </div>
         </div>
     </div>
