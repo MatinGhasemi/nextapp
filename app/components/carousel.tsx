@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 import url from "../production";
-import { useEffect, useReducer, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Carousel = () => {
     const [count,setCount] = useState(1);
@@ -27,7 +27,7 @@ const Carousel = () => {
     const req1 = useRef<SVGSVGElement|null>(null);
     const req2 = useRef<SVGSVGElement|null>(null);
     const req3 = useRef<SVGSVGElement|null>(null);
-    const rectangle = [req1,req2,req3]
+    const rectangle = [req1,req2,req3,req1]
 
     useEffect(()=>{
         if (window.innerWidth > 440)
@@ -36,7 +36,7 @@ const Carousel = () => {
     },[])
 
     const next = ()=>{
-        navigation(count)
+        navigation(count,"next")
         if (carousel.current){
             setCount(count+1);
             if (count===img.length)
@@ -44,21 +44,45 @@ const Carousel = () => {
             carousel.current.scrollLeft = count !== img.length ? w*count : 0 ;
         }
     }
-    
-    const navigation = (count:number)=>{
+    const prev = ()=>{
+        navigation(count,"prev")
+        if (carousel.current){
+            if (count===1){
+                setCount(img.length);
+                carousel.current.scrollLeft = (img.length - 1) * w ;
+            }else{
+                setCount(count-1);
+                carousel.current.scrollLeft = (count-2) * w ;
+            }
+        }
+    }
+
+    const navigation = (count:number,move:string)=>{
         rectangle.forEach((rec)=>{
             rec.current?.classList.remove("fill-price")
         })
-        if (count===3)
-            req1.current?.classList.add("fill-price");
-        else if (count===1) req2.current?.classList.add("fill-price");
-        else if (count===2) req3.current?.classList.add("fill-price");
+
+        if (move==="next"){
+            rectangle[count].current?.classList.add("fill-price");
+        }else{
+            if (count===3) req2.current?.classList.add("fill-price");
+            else if (count===1) req3.current?.classList.add("fill-price");
+            else if (count===2) req1.current?.classList.add("fill-price");
+        }
     }
 
+    const leftorright = (e: React.TouchEvent<HTMLDivElement>)=>{
+        const client_X =  e.changedTouches[0].clientX
+        if (client_X < w / 2){
+            next()
+        }else {
+            prev()
+        }
+    }
 
     return (
         <div className="h-[600px] w-full mx-auto max-w-[440px] relative">
-            <div onClick={next} ref={carousel} className="h-[600px] w-full max-w-[440px] scroll-smooth relative overflow-hidden flex">
+            <div onTouchEnd={(e:React.TouchEvent<HTMLDivElement>)=>leftorright(e)} ref={carousel} className="h-[600px] w-full max-w-[440px] scroll-smooth relative overflow-hidden flex">
                 {img.map((i,index)=>{
                     return(
                         <div key={index}>

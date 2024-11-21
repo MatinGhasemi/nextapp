@@ -1,3 +1,4 @@
+import Link from "next/link";
 import valueType from "../interfaces/relatedValue";
 
 
@@ -15,7 +16,9 @@ const Related = ({src}:{src:valueType[]}) => {
                 return (
                     <div key={i}>
                         <div className="relative h-64">
-                            <img className="w-full h-64" src={product.src} />
+                            <Link href='/products/product'>
+                                <img className="w-full h-64" src={product.src} />
+                            </Link>
                             {
                             product.heart ? 
                             <svg onClick={e=>{fillHeart(e)}} className="z-20 absolute bottom-3 right-3" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">

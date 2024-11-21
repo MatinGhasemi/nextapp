@@ -34,7 +34,7 @@ const MenuComponent:React.FC<test> = ({func}) => {
             <div className="text-lg space-y-4 mt-2">
                 <div className="pl-4"><Link onClick={()=>func()} href="/collection">October Collection</Link></div>
                 <div className="pl-4"><Link onClick={()=>func()} href="/collection">Black Collection</Link></div>
-                <div className="pl-4"><Link onClick={()=>func()} href="/collection">Hae By Haekim</Link></div>
+                <div className="pl-4"><Link onClick={()=>func()} href="/blog">Blog</Link></div>
             </div>
         </div>
         <div data-name="apparel" onClick={e=>readItem(e)} style={{height:closeHegiht}} className="overflow-hidden transition-all">

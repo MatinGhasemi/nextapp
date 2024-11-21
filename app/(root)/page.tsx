@@ -10,6 +10,7 @@ import JustForYou from "../components/justForYou";
 import OpenFashion from "../components/openFashion";
 import Collection from "../components/collections";
 import LightNavbar from "../components/lightNavbar";
+import Link from "next/link";
 
 const Home = () => {
     const values:valueType[] = [
@@ -29,15 +30,17 @@ const Home = () => {
                 <div>
                     <div className="flex justify-center gap-7 mt-5">
                         <div className="relative">
-                            <p className="tracking-widest border-b-2 border-price z-10">All</p>
-                            <svg width="11" className="absolute z-0 left-1/2 -translate-x-1/2 top-[19px] fill-price" height="11" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4.5" y="1.17008" width="5.15685" height="5.15685" transform="rotate(45 4.5 1.17008)" stroke="none" strokeWidth="1"/>
-                            </svg>
+                            <Link href='/products'>
+                                <p className="tracking-widest border-b-2 border-price z-10">All</p>
+                                <svg width="11" className="absolute z-0 left-1/2 -translate-x-1/2 top-[19px] fill-price" height="11" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="4.5" y="1.17008" width="5.15685" height="5.15685" transform="rotate(45 4.5 1.17008)" stroke="none" strokeWidth="1"/>
+                                </svg>
+                            </Link>
                         </div>
-                        <div className="tracking-widest">Apparel</div>
-                        <div className="tracking-widest">Dress</div>
-                        <div className="tracking-widest">Tshirt</div>
-                        <div className="tracking-widest">Bag</div>
+                        <div className="tracking-widest"><Link href='/products'>Apparel</Link></div>
+                        <div className="tracking-widest"><Link href='/products'>Dress</Link></div>
+                        <div className="tracking-widest"><Link href='/products'>Tshirt</Link></div>
+                        <div className="tracking-widest"><Link href='/products'>Bag</Link></div>
                     </div>
                     <Related src={values}/>        
                     <BrandBox />
