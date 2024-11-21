@@ -15,7 +15,7 @@ export default function Home() {
 
   return (<>
     <Navbar />
-    <div className="bg-background">
+    <div className="bg-background max-w-[440px] mx-auto">
       <div className="px-3">
         <div className="flex justify-center">
           <div className="relative -bottom-6 bg-11 text-center w-32 h-32">

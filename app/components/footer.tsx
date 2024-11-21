@@ -23,7 +23,7 @@ const Footer = () => {
                     <p>Blog</p>
                 </div>
             </div>
-            <div className="bg-[#C4C4C4] w-full flex justify-center items-center text-sm font-light h-11">
+            <div className="bg-[#C4C4C4] max-w-[440px] mx-auto flex justify-center items-center text-sm font-light h-11">
                 <p>Copyright© Royalsite All Rights Reserved.</p>
             </div>
         </div>
