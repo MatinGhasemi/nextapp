@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.italianno {
+  font-family: "Italianno";
+  font-weight: 400;
+  font-style: normal;
+}
+.noto{
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+body{
+  overflow-x: hidden;
+}
+#rightbar{
+  overflow-y: auto;
+}
+.blog-gradient{
+background: linear-gradient(0deg,
+  rgba(17,17,17,1) 0%,
+  rgba(17,17,17,0.99) 7%,
+  rgba(17,17,17,0.96) 13%,
+  rgba(17,17,17,0.92) 20%,
+  rgba(17,17,17,0.85) 27%,
+  rgba(17,17,17,0.77) 33%,
+  rgba(17,17,17,0.67) 40%,
+  rgba(17,17,17,0.56) 47%,
+  rgba(17,17,17,0.44) 53%,
+  rgba(17,17,17,0.33) 60%,
+  rgba(17,17,17,0.23) 67%,
+  rgba(17,17,17,0.15) 73%,
+  rgba(17,17,17,0.08) 80%,
+  rgba(17,17,17,0.04) 87%,
+  rgba(17,17,17,0.01) 93%,
+  rgba(17,17,17,0.00) 100%
+);
+}
+
+
+@layer components{
+  .active{
+    @apply border-b-2 border-orange-400;
+  }
+}
